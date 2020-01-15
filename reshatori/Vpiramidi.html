@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	<script>
+		const msg = "Чтобы посчитать V(правильной пирамиды), введи длину стороны квадрата, а потом высоту пирамиды";
+		alert(msg);
+		const a = +prompt("Длина стороны квадрата: ");
+		const h = +prompt("Высота пирамиды: ");
+
+		let s = a**2;
+		let res = (s*h)/3;
+
+		alert("V(пирамиды) = "+res);
+
+	</script>
+</body>
+</html>

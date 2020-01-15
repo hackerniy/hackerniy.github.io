@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Биквадратное уравнение</title>
+</head>
+<body>
+	<script>
+		alert("Здравья желаю, эта программа решает биквадратное и квадрат уравнение!");
+		// alert("Введи "" "" ")
+		let a = +prompt("Введи значение а: ");
+		let b = +prompt("Введи значение b: ");
+		let c = +prompt("Введи значение c: ");
+		let answer = confirm("Ваше уравнение: " + a + "x²+" + b + "x+" + c + "=0?");
+		console.log(answer);
+
+		if (answer) {
+			alert("Подожди секундочку, программа решает")
+			let d = b**2 - 4 * a * c;
+			let sqrt = Math.sqrt(d);
+			let x1 = ( - b + sqrt)/2*a;
+			let x2 = ( - b - sqrt)/2*a;
+			alert("Вот ответ:");
+			alert("x1 = " + x1);
+			alert("x2 = " + x2);
+		}
+		else{
+			alert("Перезагрузи страницу и введи заного")
+		}
+
+	</script>
+</body>
+</html>
