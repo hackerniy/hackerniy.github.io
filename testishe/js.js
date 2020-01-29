@@ -1,11 +1,14 @@
 function getName(){
+
     let a = prompt("Какое твое имя? ");
 	if (a == "" || a == null){
 		a = "Ярик";
 	}
 
 	alert( a + ", ты проходишь самый увлекательный тест");
-	return a
+	//Удаляем всё внутри тега body
+	$('body').empty();
+	return name
 }
 
 function test(){
@@ -25,3 +28,16 @@ function test(){
 	}
 	alert(name + ", ты набрал " + score + " / " + answ.length + " правильных вопросов")
 }
+function start(){
+	//Удаляем элемент с id="start"
+	$('#start').remove()
+	//Создаем абзац с текстом
+	$('body').append('<p>Введите свое имя...</p>')
+	//Создаем поле для ввода
+	$('body').append('<input type="text" id="name">')
+	//Создаем кнопку для отправки
+	$('body').append('<input type="submit" id="send">')
+	//Задаём атрибуту onclick название функции
+	$('#send').attr('onclick', 'getName()');
+	
+}	

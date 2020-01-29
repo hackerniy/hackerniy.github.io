@@ -3,20 +3,67 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
 
 	<h1 id="zag1">Заголовок 1</h1>
-	<h1 id="zag2">Заголовок 2</h1>
+	<ol id="ol">
+		<li>Первый</li>
+		<li>Второй</li>
+		<li>Третий</li>
+	</ol>
+
+	<input type="text" id="txt" autofocus="true">
+ 	<button onclick="f1()">Перед вне</button>
+ 	<button onclick="f2()">Перед внутри</button>
+ 	<button onclick="f3()">После внутри</button>
+ 	<button onclick="f4()">После вне</button>
 
 	<script>
-		let elem = document.getElementById("zag1");
-		let text1 = prompt("Введите текст для первого заголовка...");
-		elem.innerHTML = text1;
+		function f1() {
+			let text = $('#txt').val();
+			$('body').before('<li>'+text+'</li>');
+			$('#txt').val('');
+			$('#txt').focus();
+		}
+		function f2() {
+			let text = $('#txt').val();
+			$('#ol').prepend('<li>'+text+'</li>');
+			$('#txt').val('');
+			$('#txt').focus();
+		}
+		function f3() {
+			let text = $('#txt').val();
+			$('#ol').append('<li>'+text+'</li>');
+			$('#txt').val('');
+			$('#txt').focus();
+		}
+		function f4() {
+			let text = $('#txt').val();
+			$('body').after('<li>'+text+'</li>');
+			$('#txt').val('');
+			$('#txt').focus();
+		}
+		
+		// let elem = document.getElementById("zag1");
+		// let text1 = prompt("Введите текст для первого заголовка...");
+		// elem.innerHTML = text1;
 
-		let elem2 = document.getElementById("zag2");
-		let text2 = prompt("Введите текст для второго заголовка...");
-		elem2.innerHTML = text2;
+		// let body = document.body;
+		// let p = document.createElement('p');
+		// let text2 = "WOW"
+		// p.innerHTML = text2;
+		// body.appendChild(p);
+
+		// $('body').append('<h2>New text</h2>');
+		// let nev = prompt("Введите текст...");
+		// $('h2').text(nev);
+
+		
+		
+		
+
 	</script>
 
 </body>
