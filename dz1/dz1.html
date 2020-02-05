@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DZ1</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+	<input type="text" id="i">
+	<input type="text" id="ip">
+	<button onclick="wa()" id="b" >Отправить</button>
+	<script>
+		function wa() {
+			//toUpperCase() - большие буквы
+			//toLowerCase() - маленькие буквы
+			let i = $("#i").val().toLowerCase();
+			let ip = $("#ip").val().toLowerCase();
+
+			$('input').remove();
+			$('#b').remove();
+
+			$("body").prepend('<div id="d"><p id="p">'+i+' '+ip+'</p></div>');
+
+			$("#d").css({fontSize: '50px',
+						alingItems: 'center',
+						width: '500px',
+						height: '100px',
+						textAlign: 'center'})
+		}
+	</script>
+</body>
+</html>
