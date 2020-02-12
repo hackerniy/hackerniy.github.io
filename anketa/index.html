@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="script.js"></script>
+	<title>Анкета</title>
+</head>
+<body>
+	<form onsubmit="return false">
+		<h1>Анкета</h1>
+		<p><i>Заполни все поля, также заполни поля с <em>/^\</em></i></p>
+		<fieldset>
+			<legend>Контактные данные:</legend>
+
+			<label for="sname">Фамилия: <em>/^\</em></label>
+			<input placeholder="Северный" type="text" id="sname"><br>
+
+			<label for="name">Имя: <em>/^\</em></label>
+			<input placeholder="Сергей" type="text" id="name"><br>
+
+			<label for="otchestvo">Отчество: </label>
+			<input placeholder="Семенович" type="text" id="otchestvo"><br>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Дополнительная информация:</legend>
+
+			<label for="email">Электронная почта: <em>/^\</em></label>
+			<input placeholder="kamnelom@paper.com" type="email" id="email"><br>
+
+			<label for="phonenum">Номер телефона: <em>/^\</em></label>
+			<input placeholder="+78497393853" type="text" id="phonenum"><br>
+
+			<label for="vk">Вы в соц сети: </label>
+			<input placeholder="ссылка на ваш профиль" type="text" id="vk"><br>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Пол</legend>
+			<label for="pol1">Мужской: </label>
+			<input name="pol" type="radio" id="pol1" required><br>
+
+			<label for="pol2">Женский: </label>
+			<input name="pol" type="radio" id="pol2" required><br>
+
+			<label for="pol3">Свой: </label>
+			<input name="pol" type="radio" id="pol3"><br>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Дополнительная информация:</legend>
+			<label for="age">Дата рождения: <em>/^\</em></label>
+			<input type="date" id="age" required><br>
+		</fieldset>
+
+		<fieldset>
+			<legend>Место проживания</legend>
+			<select id="city">
+				<label for="">Город <em> /^\</em></label>
+				<option value="default" disabled selected></option>
+				<option value="simf">Симферополь</option>
+				<option value="sev">Севастополь</option>
+				<option value="evpa">Евпатория</option>
+				<option value="alupka">Алупка</option>
+				<option value="feod">Феодосия</option>
+			</select>
+		</fieldset>
+
+		<fieldset>
+			<legend>Расскажите о себе</legend>
+			<textarea id="about"></textarea>
+		</fieldset>
+
+		<fieldset>
+			<legend>Получше познакомиться с вами</legend>
+			<label for="films">Выберите, просмотренные вами, фильмы</label>
+			<label for="film1"><input type="checkbox" id="film1">17 друзей Гоши</label>
+			<label for="film2"><input type="checkbox" id="film2">Губка Боб</label>
+			<label for="film3"><input type="checkbox" id="film3">Соник</label>
+			<label for="film4"><input type="checkbox" id="film4"></label>
+			<label for="film5"><input type="checkbox" id="film5"></label>
+			<label for="film6"><input type="checkbox" id="film6"></label>
+			<label for="film7"><input type="checkbox" id="film7"></label><br><br>
+			<label for="photo">Выберите аватар для профиля: </label>
+			<input type="file" id="photo" accept="image/*">
+			<label for="color">Выберите цвет рамки: </label>
+			<input type="color" id="color">
+		</fieldset>
+		<input type="submit" value="Отправить данные" onclick="getform()">
+
+	</form>
+</body>
+</html>

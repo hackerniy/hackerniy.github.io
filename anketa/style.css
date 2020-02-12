@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+form{
+	width: 80%;
+	max-width: 1200px;
+	margin: auto;
+}
+p, h1{
+	font-family: 'Rubik', sans-serif;
+	text-align: center;
+}
+legend{
+	font-family: 'PT Serif', serif;
+}
+fieldset{
+	margin-bottom: 20px;
+	padding: 15px;
+}
+label{
+	width: 200px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px;
+	font-family: 'PT Serif', serif;
+}
+em{
+	font-family: bold;
+	font-style: normal;
+	color: red
+}
+input, textarea{
+	width: 300px;
+	border-radius: 18px;
+	resize: none;
+	padding: 7px 15px;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+input:focus, textarea:focus{
+	border: dashed 2px;
+}
+textarea{
+	height: 150px;
+	width: 73vw;
+}
+
+input[type="radio"], input[type="checkbox"]{
+	width: 15px;
+	margin: 5px;
+}
+input[type="color"]{
+	width: 30px;
+}
