@@ -10,7 +10,10 @@
 	<title>Анкета</title>
 </head>
 <body>
+	<button id="btnb" onclick="black()">Темная</button>
+	<button id="btnw" onclick="white()">Светлая</button>
 	<form onsubmit="return false">
+		
 		<h1>Анкета</h1>
 		<p><i>Заполни все поля, также заполни поля с <em>/^\</em></i></p>
 		<fieldset>
@@ -57,7 +60,7 @@
 		<fieldset>
 			<legend>Дополнительная информация:</legend>
 			<label for="age">Дата рождения: <em>/^\</em></label>
-			<input type="date" id="age" required><br>
+			<input type="date" id="age" required min="1900-01-01" ><br>
 		</fieldset>
 
 		<fieldset>
@@ -84,7 +87,7 @@
 			<label for="film1"><input type="checkbox" id="film1">17 друзей Гоши</label>
 			<label for="film2"><input type="checkbox" id="film2">Губка Боб</label>
 			<label for="film3"><input type="checkbox" id="film3">Соник</label>
-			<label for="film4"><input type="checkbox" id="film4"></label>
+			<label for="film4"><input type="checkbox" id="film4">Гарфилд</label>
 			<label for="film5"><input type="checkbox" id="film5"></label>
 			<label for="film6"><input type="checkbox" id="film6"></label>
 			<label for="film7"><input type="checkbox" id="film7"></label><br><br>
@@ -93,7 +96,7 @@
 			<label for="color">Выберите цвет рамки: </label>
 			<input type="color" id="color">
 		</fieldset>
-		<input type="submit" value="Отправить данные" onclick="getform()">
+		<input type="submit" value="Отправить данные" onclick="getForm()">
 
 	</form>
 </body>

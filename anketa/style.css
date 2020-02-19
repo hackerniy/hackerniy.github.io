@@ -55,3 +55,19 @@ input[type="radio"], input[type="checkbox"]{
 input[type="color"]{
 	width: 30px;
 }
+#btnb{
+	width: 150px;
+	height: 50px;
+	border-radius: 23px;
+	background-color: black;
+	color: white;
+	border: none;
+}
+#btnw{
+	width: 150px;
+	height: 50px;
+	border-radius: 23px;
+	background-color: white;
+	color: black;
+	border: none;
+}
