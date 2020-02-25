@@ -12,92 +12,94 @@
 <body>
 	<button id="btnb" onclick="black()">Темная</button>
 	<button id="btnw" onclick="white()">Светлая</button>
-	<form onsubmit="return false">
-		
-		<h1>Анкета</h1>
-		<p><i>Заполни все поля, также заполни поля с <em>/^\</em></i></p>
-		<fieldset>
-			<legend>Контактные данные:</legend>
+	<main class="main">
+		<form onsubmit="return false">
+			
+			<h1>Анкета</h1>
+			<p><i>Обязательные поля для заполнения выделены <b>жирным текстом</b></i></p>
+			<fieldset>
+				<legend>Контактные данные:</legend>
 
-			<label for="sname">Фамилия: <em>/^\</em></label>
-			<input placeholder="Северный" type="text" id="sname"><br>
+				<label for="sname"><b>Фамилия:</b></label>
+				<input placeholder="Северный" type="text" id="sname"><br>
 
-			<label for="name">Имя: <em>/^\</em></label>
-			<input placeholder="Сергей" type="text" id="name"><br>
+				<label for="name"><b>Имя:</b></label>
+				<input placeholder="Сергей" type="text" id="name"><br>
 
-			<label for="otchestvo">Отчество: </label>
-			<input placeholder="Семенович" type="text" id="otchestvo"><br>
+				<label for="otchestvo"><b>Отчество:</b></label>
+				<input placeholder="Семенович" type="text" id="otchestvo"><br>
 
-		</fieldset>
+			</fieldset>
 
-		<fieldset>
-			<legend>Дополнительная информация:</legend>
+			<fieldset>
+				<legend>Дополнительная информация:</legend>
 
-			<label for="email">Электронная почта: <em>/^\</em></label>
-			<input placeholder="kamnelom@paper.com" type="email" id="email"><br>
+				<label for="email"><b>Электронная почта:</b></label>
+				<input placeholder="kamnelom@paper.com" type="email" id="email"><br>
 
-			<label for="phonenum">Номер телефона: <em>/^\</em></label>
-			<input placeholder="+78497393853" type="text" id="phonenum"><br>
+				<label for="phonenum"><b>Номер телефона:</b></label>
+				<input placeholder="+78497393853" type="text" id="phonenum"><br>
 
-			<label for="vk">Вы в соц сети: </label>
-			<input placeholder="ссылка на ваш профиль" type="text" id="vk"><br>
+				<label for="vk">Вы в соц сети: </label>
+				<input placeholder="ссылка на ваш профиль" type="text" id="vk"><br>
 
-		</fieldset>
+			</fieldset>
 
-		<fieldset>
-			<legend>Пол</legend>
-			<label for="pol1">Мужской: </label>
-			<input name="pol" type="radio" id="pol1" required><br>
+			<fieldset>
+				<legend><b>Выберите пол</b></legend>
+				<label for="pol1">Мужской: </label>
+				<input name="pol" type="radio" id="pol1" required><br>
 
-			<label for="pol2">Женский: </label>
-			<input name="pol" type="radio" id="pol2" required><br>
+				<label for="pol2">Женский: </label>
+				<input name="pol" type="radio" id="pol2" required><br>
 
-			<label for="pol3">Свой: </label>
-			<input name="pol" type="radio" id="pol3"><br>
+				<label for="pol3">Свой: </label>
+				<input name="pol" type="radio" id="pol3"><br>
 
-		</fieldset>
+			</fieldset>
 
-		<fieldset>
-			<legend>Дополнительная информация:</legend>
-			<label for="age">Дата рождения: <em>/^\</em></label>
-			<input type="date" id="age" required min="1900-01-01" ><br>
-		</fieldset>
+			<fieldset>
+				<legend>Дополнительная информация:</legend>
+				<label for="age"><b>Дата рождения:</b></label>
+				<input type="date" id="age" required min="1900-01-01" ><br>
+			</fieldset>
 
-		<fieldset>
-			<legend>Место проживания</legend>
-			<select id="city">
-				<label for="">Город <em> /^\</em></label>
-				<option value="default" disabled selected></option>
-				<option value="simf">Симферополь</option>
-				<option value="sev">Севастополь</option>
-				<option value="evpa">Евпатория</option>
-				<option value="alupka">Алупка</option>
-				<option value="feod">Феодосия</option>
-			</select>
-		</fieldset>
+			<fieldset>
+				<legend>Место проживания</legend>
+				<select id="city">
+					<label for=""><b>Город</b></label>
+					<option value="default" disabled selected></option>
+					<option value="simf">Симферополь</option>
+					<option value="sev">Севастополь</option>
+					<option value="evpa">Евпатория</option>
+					<option value="alupka">Алупка</option>
+					<option value="feod">Феодосия</option>
+				</select>
+			</fieldset>
 
-		<fieldset>
-			<legend>Расскажите о себе</legend>
-			<textarea id="about"></textarea>
-		</fieldset>
+			<fieldset>
+				<legend>Расскажите о себе</legend>
+				<textarea id="about"></textarea>
+			</fieldset>
 
-		<fieldset>
-			<legend>Получше познакомиться с вами</legend>
-			<label for="films">Выберите, просмотренные вами, фильмы</label>
-			<label for="film1"><input type="checkbox" id="film1">17 друзей Гоши</label>
-			<label for="film2"><input type="checkbox" id="film2">Губка Боб</label>
-			<label for="film3"><input type="checkbox" id="film3">Соник</label>
-			<label for="film4"><input type="checkbox" id="film4">Гарфилд</label>
-			<label for="film5"><input type="checkbox" id="film5"></label>
-			<label for="film6"><input type="checkbox" id="film6"></label>
-			<label for="film7"><input type="checkbox" id="film7"></label><br><br>
-			<label for="photo">Выберите аватар для профиля: </label>
-			<input type="file" id="photo" accept="image/*">
-			<label for="color">Выберите цвет рамки: </label>
-			<input type="color" id="color">
-		</fieldset>
-		<input type="submit" value="Отправить данные" onclick="getForm()">
+			<fieldset>
+				<legend>Получше познакомиться с вами</legend>
+				<label for="films">Выберите, просмотренные вами, фильмы</label>
+				<label for="film1"><input type="checkbox" id="film1">17 друзей Гоши</label>
+				<label for="film2"><input type="checkbox" id="film2">Губка Боб</label>
+				<label for="film3"><input type="checkbox" id="film3">Соник</label>
+				<label for="film4"><input type="checkbox" id="film4">Гарфилд</label>
+				<label for="film5"><input type="checkbox" id="film5"></label>
+				<label for="film6"><input type="checkbox" id="film6"></label>
+				<label for="film7"><input type="checkbox" id="film7"></label><br><br>
+				<label for="photo">Выберите аватар для профиля: </label>
+				<input type="file" id="photo" accept="image/*">
+				<label for="color">Выберите цвет рамки: </label>
+				<input type="color" id="color">
+			</fieldset>
+			<input type="submit" value="Отправить данные" onclick="getForm()">
 
-	</form>
+		</form>
+	</main>
 </body>
 </html>
