@@ -1,17 +1,59 @@
+let imgSrc = "";
+function readURL(input){
+	if(input.files && input.files[0]){
+		let reader = new FileReader();
+
+		reader.onload = function(e){
+			imgSrc = e.target.result;
+		}
+		reader.readAsDataURL(input.files[0]);
+	}
+}
+
 function getForm(){
 	const age = calcAge();
 
 	let finsname = $('#sname').val();
 	let finname = $('#name').val();
 	let finotch = $('#otchestvo').val();
+	let email = $('#email').val();
+	let phonenum = $('#phonenum').val();
+	let color = $('#color').val();
+	let gender = $('label>input[type="radio"]:checked')[0].id;
+	if(gender == 'gender1'){
+		gender = 'Мужской';
+	}
+	else if (gender == 'gender2'){
+		gender = 'Женский';
+	}
+	else gender = 'Свой';
+	const city = $('#city>option:selected').text();
+	let games = getGames();
+
+	$('header').remove();
 
 	$('form').remove();
-
-	$('body').append('<h1> Ваша фамилия: ' + finsname + '</h1>')
-	$('body').append('<h1> Ваше имя: ' + finname + '</h1>')
-	$('body').append('<h1> Ваше отчество: ' + finotch + '</h1>')
+	let main = $('main');
+	main.append('<h1> Ваша фамилия: ' + finsname + '</h1>');
+	main.append('<h1> Ваше имя: ' + finname + '</h1>');
+	if (name.length>0) {
+		main.append('<h1> Ваше отчество: ' + finotch + '</h1>');
+	}
+	main.append('<h1> Ваш email: ' + email + '</h1>');
+	main.append('<h1> Ваш телефон: ' + phonenum + '</h1>');
+	main.append('<img src="'+imgSrc+'"</img>')
+	main.append('<h1> Ваш пол: ' + gender + '</h1>')
 	
 }
+
+function getFilmes(){
+	let films = [];
+	$('input[type="checkbox"]:checked').each(function(){
+		films.push($(this)[0].id);
+	});
+	return films;
+}
+
 function calcAge(){
 	let str = $('#age').val();
 	let a = str.split('-');

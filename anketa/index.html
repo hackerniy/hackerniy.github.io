@@ -10,8 +10,10 @@
 	<title>Анкета</title>
 </head>
 <body>
-	<button id="btnb" onclick="black()">Темная</button>
-	<button id="btnw" onclick="white()">Светлая</button>
+	<header class="header">
+		<button id="btnb" onclick="black()">Темная</button>
+		<button id="btnw" onclick="white()">Светлая</button>
+	</header>
 	<main class="main">
 		<form onsubmit="return false">
 			
@@ -93,7 +95,7 @@
 				<label for="film6"><input type="checkbox" id="film6"></label>
 				<label for="film7"><input type="checkbox" id="film7"></label><br><br>
 				<label for="photo">Выберите аватар для профиля: </label>
-				<input type="file" id="photo" accept="image/*">
+				<input type="file" id="photo" accept="image/*" required onchange="readURL(this)">
 				<label for="color">Выберите цвет рамки: </label>
 				<input type="color" id="color">
 			</fieldset>
