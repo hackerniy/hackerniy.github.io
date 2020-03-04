@@ -48,8 +48,43 @@ window.onload = function(){
 		fillStyle: '#703500',
 	})
 	//тело
-
-
+	can.drawRect({
+		x: 130, y:190,
+		width: 240, height: 40,
+		fillStyle: '#29768E',
+		fromCenter: false,
+	})
+	can.drawRect({
+		x: 130, y:190,
+		width: 30, height: 120,
+		fillStyle: '#29768E',
+		fromCenter: false,
+	})
+	can.drawRect({
+		x: 160, y:230,
+		width: 70, height: 80,
+		fillStyle: '#1A2C33',
+		fromCenter: false,
+	})
+	//рука
+	can.drawRect({
+		x: 160, y:230,
+		width: 4, height: 80,
+		fillStyle: '#1A2C33',
+		fromCenter: false,
+	})
+	can.drawRect({
+		x: 330, y:190,
+		width: 40, height: 120,
+		fillStyle: '#29768E',
+		fromCenter: false,
+	})
+	can.drawRect({
+		x: 330, y:230,
+		width: 4, height: 80,
+		fillStyle: '#1A2C33',
+		fromCenter: false,
+	})
 
 	
 // 	//прямоугольник
