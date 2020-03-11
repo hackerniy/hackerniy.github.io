@@ -13,16 +13,30 @@ window.onload = function() {
 		return distance;
 	}
 	
-	// function checkwin(){
 
-	// 	return 
-	// }
+	function theend(last){
+		$('div').empty();
+		$('div').append('<h1>'+last+'</h1>');
+		$('div').append('<button onclick="location.reload()" >Начать заново</button>')
+	}
+	function image(distance){
+
+	 	let led = 'map/led.png';
+	 	let fire = 'map/fire.png';
+
+	 	return distance > 200 ? led : fire
+	}
 
 	let width;
 	let height;
 
-	width = $('#can').width();
-	height = $('#can').height();
+	width = $('div').width();
+	height = $('div').height()*0.95;
+
+	$('#can').attr({
+		width: width,
+		height: height
+	});
 	
 	let clicks = 0;
 
@@ -45,18 +59,22 @@ window.onload = function() {
 		let distance = gerDistance(event, target);
 		//Преобразуем расстояние в подсказку
 		//Сделать дома
-		let hint = 'Подсказка' + distance;
-		let win = false;
+		let hint = image(distance);
+
+		let size = distance<=200? 11 - Math.floor(distance/20) : 1;
+
+		if(distance < 20){
+			theend('Класс, и что дальше?');
+		}
+		if(clicks == 1000000000000000000000000000){
+			theend('Из тебя пирата не сделаешь:(');
+		}
 
 		//Выводим подсказку
-		$('#can').drawText({
-			x: 50, y: 50,
-			fromCenter: false,
-			fillStyle: '#36e',
-			fontStyle: 'bolt',
-			fontSize: '20pt',
-			text: hint,
-			// layer: true, name: 'text'
-		})
+		$('#can').drawImage({
+			source: hint,
+			x: event.offsetX, y: event.offsetY,
+			width: 20*size, height: 20*size
+		});
 	});
 }
