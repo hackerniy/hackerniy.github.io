@@ -1,6 +1,7 @@
 function start(){
 	$('body').empty();
 	$('body').append('<div  class="div"></div>')
+	$('.div').css('height', '114px')
 	$('.div').append('<button onclick="game()">Играть</button>')
 }
 function getRandomWord(){
@@ -36,9 +37,10 @@ function check(){
 		console.log('Molodec`')
 	}
 	else if(wrong.length == 10){
-		console.log('Бывает')
+		$('.div').empty()
+		drawend()
 	}
-	else{
+	else {
 		let letter = $('#letter').val();
 		letter = letter.toLowerCase();
 		let find = false;
@@ -53,6 +55,7 @@ function check(){
 			wrong.push(letter.toUpperCase())
 			drawV(wrong.length)
 		}
+	
 		$('.div').empty();
 		$('.div').append('<h1 class="question"> ' + answer.join(' ') + '</h1>');
 		$('.div').append('<p class="wrong">' + wrong.join(', ') + '</p>')
@@ -137,4 +140,29 @@ function drawV(elem){
  			x2: 245, y2: 370
  		})
 	}
+}
+function drawend(){
+	let canv = $('#canv')
+	canv.drawLine({
+ 			strokeStyle: 'black',
+ 			strokeWidth: 10,
+ 			x1: 265, y1: 320,
+ 			x2: 285, y2: 370
+ 		})
+	canv.drawLine({
+		rounded: 'true',
+ 		strokeStyle: 'black',
+ 		strokeWidth: 10,
+ 		x1: 300, y1: 240,
+ 		x2: 430, y2: 230,
+ 		startArrow: true,
+ 		arrowRadius: 40,
+ 		arrowAngle: 60
+	})
+	canv.drawText({
+		text: name,
+		fillStyle: 'black',
+		fontSize: 40,
+		x: 400, y: 200
+	})
 }

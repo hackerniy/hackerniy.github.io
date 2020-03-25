@@ -19,7 +19,7 @@ function getForm(){
 	let email = $('#email').val();
 	let phonenum = $('#phonenum').val();
 	let color = $('#color').val();
-	let gender = $('label>input[type="radio"]:checked')[0].id;
+	let gender = $('input[name="pol"]:checked')[0].id;
 	if(gender == 'gender1'){
 		gender = 'Мужской';
 	}
@@ -28,7 +28,7 @@ function getForm(){
 	}
 	else gender = 'Свой';
 	const city = $('#city>option:selected').text();
-	let games = getGames();
+	
 
 	$('header').remove();
 
@@ -41,7 +41,7 @@ function getForm(){
 	}
 	main.append('<h1> Ваш email: ' + email + '</h1>');
 	main.append('<h1> Ваш телефон: ' + phonenum + '</h1>');
-	main.append('<img src="'+imgSrc+'"</img>')
+	main.append('<img class="ing" src="'+imgSrc+'"</img>')
 	main.append('<h1> Ваш пол: ' + gender + '</h1>')
 	
 }
