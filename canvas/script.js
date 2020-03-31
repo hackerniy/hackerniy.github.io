@@ -62,7 +62,7 @@ window.onload = function(){
 	})
 	can.drawRect({
 		x: 160, y:230,
-		width: 70, height: 80,
+		width: 4, height: 80,
 		fillStyle: '#1A2C33',
 		fromCenter: false,
 	})
