@@ -1,4 +1,18 @@
+function start() {
+	$('body').append('<h1>"Минималистичный лабиринт"</h1>');
+	$('body').append('<h3>Выбор сложности: </h3>');
+	$('body').append('<button onclick="easy()">Легко</button>');
+	$('body').append('<button onclick="medium()">Средне</button>');
+	$('body').append('<button onclick="hard()">Сложно</button>');
+}
+function getwh(){
+	if (easy()){
+		canv.width = 5 * width + 5;
+		canv.height = 5 * height + 5;
+	}
+}
 function mapGen(width, height, steps, mazes){
+	$('body').empty();
 	// Функция управления персонажем
 	function character(dx, dy){
 		// Получаем цвет пикселя из промежутка
