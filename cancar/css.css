@@ -1,0 +1,18 @@
+*{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body{
+	margin: 0;
+}
+div{
+	width: 100%;
+	height: calc(100vh - 5px);
+	margin: auto;
+}
+h1{
+	margin: 0;
+	text-align: center;
+	height: 5%;
+}

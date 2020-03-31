@@ -45,7 +45,7 @@ input:focus, textarea:focus{
 }
 textarea{
 	height: 150px;
-	width: 73vw;
+	width: 80%;
 }
 
 input[type="radio"], input[type="checkbox"]{
@@ -91,4 +91,7 @@ input[type="color"]{
 	border: solid gray 1px;
 	margin: auto;
 	border-radius: 30px;
+}
+.ing{
+	align-items: center;
 }
