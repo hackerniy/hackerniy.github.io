@@ -7,8 +7,16 @@ function start() {
 }
 function getwh(){
 	if (easy()){
-		canv.width = 5 * width + 5;
-		canv.height = 5 * height + 5;
+		canv.width = 5 * width + 1;
+		canv.height = 5 * height + 1;
+	}
+	if (medium()){
+		canv.width = 10 * width + 2;
+		canv.height = 10 * height + 2;
+	}
+	if (hard()){
+		canv.width = 15 * width + 5;
+		canv.height = 15 * height + 5;
 	}
 }
 function mapGen(width, height, steps, mazes){
